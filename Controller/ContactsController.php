@@ -18,7 +18,7 @@ class ContactsController {
             $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
 
             switch ($action) {
-                case 'add':
+                case 'create':
                         $this->collectAddContact($_REQUEST['contact_name'], $_REQUEST['contact_email'], $_REQUEST['contact_adress']);
                     break;
                 case 'read':
@@ -45,7 +45,7 @@ class ContactsController {
 
     public function collectAddContact($contact_name, $contact_email, $contact_adress) {
         $contacts = $this->ContactsLogic->addContact($contact_name, $contact_email, $contact_adress);
-        include 'view/home.php';
+        include 'View/succes.php';
     }
 
     public function collectReadAllContacts() {
@@ -60,11 +60,11 @@ class ContactsController {
 
     public function collectUpdateContact($contact_id) {
         $contacts = $this->ContactsLogic->updateContact($contact_id);
-        include 'view/home.php';
+        include 'view/update.php';
     }
     public function collectDeleteContact($contact_id) {
         $contacts = $this->ContactsLogic->deleteContact($contact_id);
-        include 'view/home.php';
+        include 'view/succes.php';
     }
 }
 

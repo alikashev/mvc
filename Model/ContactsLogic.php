@@ -12,11 +12,11 @@ class ContactsLogic {
 
     public function __destruct(){}
     
-    public function addContact($parameters){
+    public function addContact($contact_name, $contact_email, $contact_adress){
 
         try {
 
-            $query = "INSERT INTO contacts (COLUMNS)";
+            $query = "INSERT INTO contacts (contact_name, contact_email, contact_adress)";
             $query .= "VALUES ('$contact_name', '$contact_email', '$contact_adress');";
             $result = $this->datahandler->createData($query);
             
@@ -68,7 +68,22 @@ class ContactsLogic {
 
         try {
 
-            $query = "DELETE FROM reservations ";
+            $query = "DELETE FROM contacts ";
+            $query .= "WHERE contact_id=$contact_id ";
+            $result = $this->datahandler->deleteData($query);
+            
+        } catch (PDOException $e) {
+
+            echo "Fout opgetreden";
+
+        }
+    }
+
+    public function updateContact($contact_id){
+
+        try {
+
+            $query = "UPDATE contacts ";
             $query .= "WHERE contact_id=$contact_id ";
             $result = $this->datahandler->deleteData($query);
             

@@ -16,7 +16,7 @@ class OutputData {
 
     function createTable($rows) {
         $html = '<table class="tablerow" border="2">';
-        $html .= "<a href='./index.php'>Add song</a>";
+        $html .= "<a href='./View/create.php'>Maak contact aan</a>";
             $html .= '<tr>';
             	foreach($rows[0] as $key => $value){
             		$html .= "<th>" . $key . "</th>";
