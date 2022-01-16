@@ -12,7 +12,7 @@
         <form action="../index.php?action=create" method="POST">
             <div class="name">
                 <label for="name">Voor en achternaam</label>
-                <input name="contact_name" type="text">
+                <input name="contact_name" type="text" value="<?php $row['contact_name'] ?>">
             </div>
             <div class="email">
                 <label for="email">E-mail</label>
@@ -21,7 +21,7 @@
             <div class="adress">
                 <label for="adress">Adres</label>
                 <input name="contact_adress" type="text">
-                <button class="btn" type="submit">Maak contact aan</button>
+                <button class="btn" type="submit">Weizigingen opslaan</button>
             </div>
         </form>
     </div>

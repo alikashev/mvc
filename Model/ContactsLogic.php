@@ -83,9 +83,12 @@ class ContactsLogic {
 
         try {
 
-            $query = "UPDATE contacts ";
+            $query = "SELECT * FROM contacts ";
             $query .= "WHERE contact_id=$contact_id ";
-            $result = $this->datahandler->deleteData($query);
+            $result = $this->datahandler->readsData($query);
+            $results = $result->fetchAll();
+
+            return $this->outputData->updateTable($results);
             
         } catch (PDOException $e) {
 
