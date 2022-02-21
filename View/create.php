@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create - MVC</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <div class="container">
-        <form action="../index.php?action=create" method="POST">
+        <form action="./index.php?action=create" method="POST">
             <div class="name">
                 <label for="name">Voor en achternaam</label>
                 <input name="contact_name" type="text">

@@ -24,6 +24,9 @@ class ContactsController {
                 case 'read':
                         $this->collectReadAllContacts();
                     break;
+                case 'createform':
+                        require 'View/create.php';
+                    break;
                 case 'readone':
                         $this->collectReadOneContact($_REQUEST['contact_id']);
                      break;
