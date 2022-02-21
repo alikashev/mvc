@@ -15,7 +15,7 @@ class OutputData {
     }
 
     function createTable($rows) {
-        $html = '<table class="tablerow" border="2">';
+        $html = '<table class="tablerow" border="1">';
         $html .= "<a href='./View/create.php'>Maak contact aan</a>";
             $html .= '<tr>';
             	foreach($rows[0] as $key => $value){
