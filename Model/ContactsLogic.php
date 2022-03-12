@@ -6,7 +6,7 @@ require_once 'View/outputData.php';
 class ContactsLogic {
 
     public function __construct() {
-        $this->datahandler = new datahandler("localhost", "mysql", "school","ali", "ali1903");
+        $this->datahandler = new datahandler("localhost", "mysql", "school","root", "");
         $this->outputData = new OutputData();
     }
 
