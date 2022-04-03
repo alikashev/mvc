@@ -8,6 +8,13 @@
     <title> MVC - Succes</title>
 </head>
 <body>
+    <?php 
+    
+    session_start();
+
+    echo $_SESSION['bericht'];
+
+    ?>
     <div class="succes-modal">
         <h1>Bedankt voor het gebruik maken van onze MCV</h1>
         <h2>Succes!</h2>

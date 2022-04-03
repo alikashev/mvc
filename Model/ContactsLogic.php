@@ -30,6 +30,12 @@ class ContactsLogic {
 
     public function readAllContacts(){
 
+        session_start();
+
+        $_SESSION['bericht'] = "Welcom op onze website, wij maken gebruik van coockie's";
+
+        echo $_SESSION['bericht'];
+
         try {
 
             $query = "SELECT contact_id, contact_name, contact_email, contact_adress FROM contacts";
